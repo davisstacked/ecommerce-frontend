@@ -1,1 +1,64 @@
-{ "images": [{ "id": 1, "alt": "off-white sneaker", "url": "https://i.imgur.com/OqXSTbp.png" }] }
+{
+  "products": [
+    {
+      "id": 1,
+      "brand": "Off-White",
+      "name": "Out Of Office 'Ooo' sneakers",
+      "alt": "Nike off-white sneaker",
+      "images": ["https://i.imgur.com/OqXSTbp.png"],
+      "price": 775,
+      "description": "Energize your look with a fresh take on heritage adidas style. The adidas Daily 3.0 Shoes cut a classic profile with a modern suede upper. Your walk across campus or commute across town has never looked or felt this good.",
+      "qualitites": [
+        "Regular fit",
+        "Lace closure",
+        "Rubber outsole with vulcanized look",
+        "Imported"
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Nike",
+      "name": "Nike Gamma Force",
+      "alt": "Nike Gamma Force sneaker",
+      "images": ["https://i.imgur.com/BfFklJ3.png"],
+      "price": 200,
+      "description": "Energize your look with a fresh take on heritage adidas style. The adidas Daily 3.0 Shoes cut a classic profile with a modern suede upper. Your walk across campus or commute across town has never looked or felt this good.",
+      "qualitites": [
+        "Regular fit",
+        "Lace closure",
+        "Rubber outsole with vulcanized look",
+        "Imported"
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "Nike",
+      "name": "Cosmic Unity 3",
+      "alt": "Nike Cosmic Unity 3 sneaker",
+      "images": ["https://i.imgur.com/eiUBkbp.png"],
+      "price": 160,
+      "description": "Energize your look with a fresh take on heritage adidas style. The adidas Daily 3.0 Shoes cut a classic profile with a modern suede upper. Your walk across campus or commute across town has never looked or felt this good.",
+      "qualitites": [
+        "Regular fit",
+        "Lace closure",
+        "Rubber outsole with vulcanized look",
+        "Imported"
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "Adidas",
+      "name": "Daily 3.0 Shoes",
+      "alt": "Adidas Daily 3.0 sneaker",
+      "images": ["https://i.imgur.com/rJ9ikZt.png"],
+      "price": 98.99,
+      "description": "Energize your look with a fresh take on heritage adidas style. The adidas Daily 3.0 Shoes cut a classic profile with a modern suede upper. Your walk across campus or commute across town has never looked or felt this good.",
+      "qualitites": [
+        "Regular fit",
+        "Lace closure",
+        "Rubber outsole with vulcanized look",
+        "Imported"
+      ]
+    }
+  ]
+}

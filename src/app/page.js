@@ -5,18 +5,18 @@ import styles from './page.module.css'
 
 export default function Home() {
 
-  const [images, setImages] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3001/images'); 
+        const response = await fetch('http://localhost:3001/products'); 
         const data = await response.json();
-        setImages(data);
+        setProducts(data);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching images:', error);
+        console.error('Error fetching products:', error);
         setLoading(false);
       }
     };
@@ -31,9 +31,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div>
+        {/* should map over shoes. */}
         <Image
-          src={images[0].url}
-          alt={images[0].alt}
+          src={products[0].images[0]}
+          alt={products[0].alt}
           width={261}
           height={284}
           priority
