@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.productImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productContainer {
+  display: flex;
+  overflow-x: hidden; 
+  gap: 20px;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left side */
+  font-family: 'Inter', sans-serif;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center; /* Center the image */
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  font-family: 'Inter', sans-serif;
+}
+
+.brand {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+.name {
+  margin-top: 5px;
+}
+
+.price {
+  margin-top: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+.scrollable {
+  overflow-x: scroll;
+}
+
+// Hide scroll buttons on larger screens
+@media screen and (min-width: 768px) {
+  .buttons {
+    display: none;
+  }
+}

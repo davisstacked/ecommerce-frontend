@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React, { FC } from 'react';
 import { useFetchData } from './recoilAtoms';
-import Image from 'next/image'
 import styles from './page.module.css'
+import ProductImages from './components/ProductImages/ProductImages';
 
-export default function Home() {
+const Home: FC = () =>{
   const { products, loading } = useFetchData();
 
   if (loading) { 
@@ -14,15 +14,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div>
-        {/* should map over products. */}
-        <Image
-          src={products[0].images[0]}
-          alt={products[0].alt}
-          width={261}
-          height={284}
-          priority
-        />
+        <ProductImages products={products} />
       </div>
     </main>
   );
 }
+
+export default Home;
