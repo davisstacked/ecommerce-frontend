@@ -1,6 +1,6 @@
 'use client';
 import React, { FC } from 'react';
-import { useFetchData } from './recoilAtoms';
+import { useFetchData } from './recoil/atoms';
 import styles from './page.module.css';
 import ProductLinkList from './components/ProductLinkList/ProductLinkList';
 

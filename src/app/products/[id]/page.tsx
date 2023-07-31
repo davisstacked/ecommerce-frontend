@@ -1,7 +1,7 @@
 'use client';
 import React, { FC } from 'react';
 import { useRecoilValue } from 'recoil';
-import { productsState } from '../../recoilAtoms';
+import { productsState } from '../../recoil/atoms';
 import ProductPage from './ProductPage';
 
 interface Product {

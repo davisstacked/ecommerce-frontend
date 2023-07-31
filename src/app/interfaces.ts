@@ -13,18 +13,13 @@ export interface ProductState {
   products: Product[];
 }
 
-export interface CartItem {
-  id: number;
-  name: string;
-  price: number;
+export interface ShoppingCartItem {
+  product: Product;
   quantity: number;
 }
 
 export interface ShoppingCart {
-  items: CartItem[];
-  subtotal: number;
-  tax: number;
-  total: number;
+  items: ShoppingCartItem[];
 }
 
 

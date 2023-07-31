@@ -1,7 +1,8 @@
+'use client';
 import { useEffect, useState } from 'react';
 import { atom, useRecoilState } from 'recoil';
-import { Product, ShoppingCart } from './interfaces';
-import { fetchData } from './api'; 
+import { Product, ShoppingCart } from '../interfaces';
+import { fetchData } from '../api';
 
 export const productsState = atom<Product[]>({
   key: 'productsState',
@@ -29,12 +30,8 @@ export function useFetchData() {
   return { loading, products };
 }
 
-export const cartState = atom<ShoppingCart>({
-  key: 'cartState',
-  default: {
-    items: [],
-    subtotal: 0,
-    tax: 0,
-    total: 0,
-  }  
+export const shoppingCartState = atom<ShoppingCart>({
+  key: 'shoppingCartState',
+  default: { items: [] }
 });
+

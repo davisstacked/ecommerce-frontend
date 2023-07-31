@@ -1,7 +1,8 @@
-'use client';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Image from 'next/image';
 import { Product } from '../../interfaces';
+import { AddToCart } from '../../components/AddToCart';
+import { Counter } from '../../components/Counter';
 import styles from './ProductPage.module.scss';
 
 interface ProductPageProps {
@@ -9,7 +10,11 @@ interface ProductPageProps {
 }
 
 const ProductPage: FC<ProductPageProps> = ({ product }) => {
-  
+  const [quantity, setQuantity] = useState(1);
+
+  const incrementQuantity = () => setQuantity(quantity + 1);
+  const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
+
   return (
     <div className={styles.productPage}>
       <div className={styles.image}>
@@ -19,17 +24,23 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           width={500}
           height={500}
         />
-      <div className={styles.details}>
-        <div className={styles.brand}>{product.brand}</div>
-        <div className={styles.name}>{product.name}</div>
-        <div className={styles.price}>
-          ${product.price.toFixed(2).replace(/\.00$/, '')}
+        <div className={styles.details}>
+          <div className={styles.brand}>{product.brand}</div>
+          <div className={styles.name}>{product.name}</div>
+          <div className={styles.price}>
+            ${product.price.toFixed(2).replace(/\.00$/, '')}
+          </div>
+          <Counter
+            quantity={quantity}
+            incrementQuantity={incrementQuantity}
+            decrementQuantity={decrementQuantity}
+          />
+          <AddToCart product={product} quantity={quantity} />
         </div>
-      </div>
-      <div className={styles.description}>
-        <h2>Description</h2>
-        <p>{product.description}</p>
-      </div>
+        <div className={styles.description}>
+          <h2>Description</h2>
+          <p>{product.description}</p>
+        </div>
       </div>
     </div>
   );
