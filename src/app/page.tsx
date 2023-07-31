@@ -1,8 +1,8 @@
 'use client';
 import React, { FC } from 'react';
 import { useFetchData } from './recoilAtoms';
-import styles from './page.module.css'
-import ProductImages from './components/ProductImages/ProductImages';
+import styles from './page.module.css';
+import ProductLinkList from './components/ProductLinkList/ProductLinkList';
 
 const Home: FC = () =>{
   const { products, loading } = useFetchData();
@@ -14,7 +14,7 @@ const Home: FC = () =>{
   return (
     <main className={styles.main}>
       <div>
-        <ProductImages products={products} />
+        <ProductLinkList products={products} />
       </div>
     </main>
   );
