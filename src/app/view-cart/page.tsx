@@ -7,7 +7,8 @@ import {
   totalSelector,
 } from '../recoil/selectors';
 import { shoppingCartState } from '../recoil/atoms';
-import { CartItem } from '../components/ShoppingCartItem';
+import ShoppingCartItem from '../components/ShoppingCartItemList/ShoppingCartItem';
+import Link from 'next/link';
 
 const ShoppingCart: FC = () => {
   const cartItems = useRecoilValue(shoppingCartState);
@@ -17,18 +18,21 @@ const ShoppingCart: FC = () => {
 
   return (
     <div>
+      <h1>Your Bag</h1>
       <div>
         {cartItems.items.map((item) => (
-          <CartItem key={item.product.id} item={item} />
+          <ShoppingCartItem key={item.product.id} item={item} />
         ))}
       </div>
       <div>
+        <h1>Summary</h1>
         <div>Subtotal: {subtotal.toFixed(2)}</div>
         <div>Shipping and Delivery: 20</div>
         <div>Tax: {tax.toFixed(2)}</div>
         <div>Discount: 6</div>
         <div>Total: {total.toFixed(2)}</div>
         <button>Checkout</button>
+        <Link href='/'>Home</Link>
       </div>
     </div>
   );

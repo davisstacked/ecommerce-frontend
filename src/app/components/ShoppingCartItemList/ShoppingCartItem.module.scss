@@ -1,0 +1,61 @@
+.ShoppingCartItem {
+  display: flex;
+  flex-direction: row;
+  width: 582px;
+  height: 166px;
+
+  .image {
+    display: flex;
+    width: 165px;
+    height: 166px;
+    object-fit: contain;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 1em;
+
+    .topDetails {
+      display: flex;
+      justify-content: space-between;
+
+      .brandAndName {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .price {
+        align-self: baseline;
+      }
+    }
+
+    .counterRemoveContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .removeButton {
+        margin-top: 1em;
+
+        @media (min-width: 768px) {
+          margin-top: 0;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
