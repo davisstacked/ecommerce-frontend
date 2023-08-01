@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import Image from 'next/image';
 import { Product } from '../../interfaces';
-import { AddToCart } from '../../components/AddToCart';
+import AddToCartButton from '../../components/AddToCartButton';
 import { Counter } from '../../components/Counter';
 import styles from './ProductPage.module.scss';
+import ProductCarousel from '../../components/ProductCarousel/ProductCarousel';
 
 interface ProductPageProps {
   product: Product;
@@ -18,12 +18,7 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
   return (
     <div className={styles.productPage}>
       <div className={styles.image}>
-        <Image
-          src={product.images[0]}
-          alt={product.alt}
-          width={500}
-          height={500}
-        />
+        <ProductCarousel images={product.images}/>
         <div className={styles.details}>
           <div className={styles.brand}>{product.brand}</div>
           <div className={styles.name}>{product.name}</div>
@@ -35,7 +30,7 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
             incrementQuantity={incrementQuantity}
             decrementQuantity={decrementQuantity}
           />
-          <AddToCart product={product} quantity={quantity} />
+          <AddToCartButton product={product} quantity={quantity} />
         </div>
         <div className={styles.description}>
           <h2>Description</h2>

@@ -1,0 +1,31 @@
+.carousel {
+  max-width: 34rem; 
+  max-height: 23.4rem;
+  margin: 0 auto;
+  display: inline-block;
+
+  .slick-slider {
+    position: relative;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slick-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}

@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilCallback } from 'recoil';
 import { shoppingCartState } from '../recoil/atoms';
-import { Button } from 'react-bootstrap';
 import { Product } from '../interfaces';
+import Button from './Button/Button';
 import Link from 'next/link';
 
 interface AddToCartProps {
@@ -10,14 +10,13 @@ interface AddToCartProps {
   quantity: number;
 }
 
-export const AddToCart: FC<AddToCartProps> = ({ product, quantity }) => {
-  const [cart, setCart] = useRecoilState(shoppingCartState);
-
-  const addToCart = () => {
+const AddToCartButton: FC<AddToCartProps> = ({ product, quantity }) => {
+  const addToCart = useRecoilCallback(({ snapshot, set }) => () => {
+    const cart = snapshot.getLoadable(shoppingCartState).getValue();
     const cartItem = cart.items.find((item) => item.product.id === product.id);
 
     if (cartItem) {
-      setCart({
+      set(shoppingCartState, {
         ...cart,
         items: cart.items.map((item) =>
           item.product.id === product.id
@@ -26,16 +25,23 @@ export const AddToCart: FC<AddToCartProps> = ({ product, quantity }) => {
         ),
       });
     } else {
-      setCart({
+      set(shoppingCartState, {
         ...cart,
         items: [...cart.items, { product, quantity }],
       });
     }
-  };
+  });
 
   return (
     <Link href='/view-cart'>
-        <Button onClick={addToCart}>Add to Cart</Button>
+      <Button
+        text='Add to Cart'
+        height={3.75}
+        width={28.5}
+        onClick={addToCart}
+      />
     </Link>
   );
 };
+
+export default AddToCartButton;
