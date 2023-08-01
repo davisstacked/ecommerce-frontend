@@ -1,0 +1,39 @@
+.advertisement {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;  
+  margin: 0 auto;
+  background-color: #EAEEEF;
+  padding: 3rem;
+
+  
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;  
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    div {
+      font-size: 2rem; 
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;  
+      }
+    }
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;  
+    height: auto;  
+    padding: 2rem, 0, 2rem, 0;
+  }
+}
+

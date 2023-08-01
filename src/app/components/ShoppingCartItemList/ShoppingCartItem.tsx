@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import { useRecoilState } from 'recoil';
 import { shoppingCartState } from '../../recoil/atoms';
 import { Counter } from '../Counter';
@@ -81,9 +81,9 @@ const ShoppingCartItem: FC<CartItemProps> = ({ item }) => {
             incrementQuantity={incrementQuantity}
             decrementQuantity={decrementQuantity}
           />
-          <Button className={removeButton} onClick={removeItem}>
+          <button className={removeButton} onClick={removeItem}>
             Remove
-          </Button>
+          </button>
         </div>
       </div>
     </div>

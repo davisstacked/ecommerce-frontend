@@ -36,7 +36,8 @@
     .counterRemoveContainer {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      
 
       @media (min-width: 768px) {
         flex-direction: row;
@@ -44,6 +45,10 @@
 
       .removeButton {
         margin-top: 1em;
+        margin-left: 1em;
+        border: none;
+        background: transparent;
+        text-decoration: underline;
 
         @media (min-width: 768px) {
           margin-top: 0;
