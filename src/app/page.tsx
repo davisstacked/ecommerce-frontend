@@ -5,25 +5,25 @@ import styles from './page.module.scss';
 import ProductLinkList from './components/ProductLinkList/ProductLinkList';
 import Advertisement from './components/Advertisement/Advertisement';
 
-const { main, contentWrapper, title } = styles;
-
 const Home: FC = () => {
   const { products, loading } = useFetchData();
+
+  const { title, homePage, productLinks } = styles;
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
-    <main className={main}>
-      <div className={contentWrapper}>
-          <Advertisement />
-        <h1 className={title}>Explore our latest drops</h1>
-        <div>
-          <ProductLinkList products={products} />
-        </div>
+    <div className={homePage}>
+      <Advertisement />
+      <div className={title}>
+        <h1>Explore our latest drops</h1>
       </div>
-    </main>
+      <div className={productLinks}>
+        <ProductLinkList products={products} />
+      </div>
+    </div>
   );
 };
 

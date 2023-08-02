@@ -1,8 +1,26 @@
-$headerHeight: 60px;
-$footerHeight: 40px;
+$headerHeight: 64px;
+$footerHeight: 72px;
 
-.main-component {
+.main {
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
-  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  padding-top: $headerHeight;
+  padding-bottom: $footerHeight;
+}
+
+.mainContent {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgreen;
+  padding: 20px 0 20px 0;
 }

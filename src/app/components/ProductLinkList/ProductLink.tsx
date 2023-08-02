@@ -12,14 +12,19 @@ const ProductPageLink: FC<ProductPageLinkProps> = ({ product }) => {
   return (
     <div className={styles.productItem}>
       <Link href={`/Products/${product.id}`}>
-          <div className={styles.imageContainer}>
-            <Image
-              src={product.images[0]}
-              alt={product.alt}
-              width={261}
-              height={284}
-            />
-          </div>
+        <div className={styles.imageContainer}>
+          <Image
+            src={product.images[0]}
+            alt={product.alt}
+            sizes='100vw'
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            width={261}
+            height={284}
+          />
+        </div>
       </Link>
       <div className={styles.textContainer}>
         <div className={styles.brand}>{product.brand}</div>

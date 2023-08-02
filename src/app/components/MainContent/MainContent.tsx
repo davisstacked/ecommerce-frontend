@@ -6,8 +6,12 @@ interface MainContentProps {
 }
 
 const MainContent: FC<MainContentProps> = ({ children }) => {
-  const { main } = styles;
-  return <main className={main}>{children}</main>;
+  const { main, mainContent } = styles;
+  return (
+    <main className={main}>
+      <div className={mainContent}>{children}</div>
+    </main>
+  );
 };
 
 export default MainContent;

@@ -39,7 +39,8 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
     <div className={productPage}>
       <div className={contentContainer}>
         <div className={carouselContainer}>
-          <ProductCarousel images={product.images} />
+          hi
+          {/* <ProductCarousel images={product.images} /> */}
         </div>
         <div className={detailsContainer}>
           <div className={detailsWrapper}>
@@ -81,8 +82,13 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           <Image
             src={product.images[3]}
             alt={product.alt}
-            width={528}
-            height={373}
+            width={350}
+            height={248}
+            sizes='100vw'
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </div>

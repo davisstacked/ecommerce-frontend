@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-.productImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .productContainer {
   display: flex;
-  overflow-x: hidden; 
-  gap: 20px;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll; 
 }
 
 .productItem {
