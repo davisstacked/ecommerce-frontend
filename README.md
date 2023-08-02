@@ -14,6 +14,13 @@ pnpm dev
 START JSON SERVER DATABASE
 npx json-server --watch db.json --port 3001
 
+#PRODUCT CAROUSEL
+
+An external library - react slick and slick-carousel was utilized for the carousel. The arrows from the figma design are hidden as industry-standard is for the right and left arrows to appear on top of the photo (Every library researched was implemented this way.)
+
+#RESPONSIVE SIZING
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

@@ -1,14 +1,124 @@
 .productPage {
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height:100vh;
+  padding: 3rem 0 4rem;
+  background-color: #E9EBEE;
 }
 
-.details {
+.contentContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 80%;
+  padding: 3rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.carouselWrapper {
+  width: auto;
+  height: 80%;
+  display: flex;
+  background-color: lightblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailsContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.detailsWrapper {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: pink;
+  border-radius: 20px;
+}
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    .infoContainer .title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .infoContainer .price {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+  .addToCartButtonWrapper {
+    display: flex;
+    justify-content: center; // center the button
+    align-items: flex-end;
+  }
+
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.descriptionWrapper .divider {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0 0 1rem;
 }
 
 .description {
   margin-top: 20px;
+  font-size: 18px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px; 
+  background-color: #E9EBEE; 
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 400;
 }
