@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from './ProductCarousel.module.scss';
+import styles from './Carousel.module.scss';
 import Image from 'next/image';
 
 interface ImageProps {
@@ -30,9 +30,9 @@ const ProductCarousel: React.FC<ImageProps> = ({ images }) => {
             <Image
               src={image}
               alt='product carousel'
-              height={240}
-              width={350}
-              sizes='100vw'
+              height={375}
+              width={546}
+              sizes='(max-width: 768px) 100vw, 768px'
               style={{
                 width: '100%',
                 height: 'auto',

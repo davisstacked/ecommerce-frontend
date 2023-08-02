@@ -3,7 +3,7 @@ import { Product } from '../../interfaces';
 import AddToCartButton from '../../components/AddToCartButton';
 import { Counter } from '../../components/Counter';
 import styles from './ProductPage.module.scss';
-import ProductCarousel from '../../components/ProductCarousel/ProductCarousel';
+import Carousel from '../../components/Carousel/Carousel';
 import Image from 'next/image';
 
 interface ProductPageProps {
@@ -39,8 +39,7 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
     <div className={productPage}>
       <div className={contentContainer}>
         <div className={carouselContainer}>
-          hi
-          {/* <ProductCarousel images={product.images} /> */}
+          <Carousel images={product.images} />
         </div>
         <div className={detailsContainer}>
           <div className={detailsWrapper}>

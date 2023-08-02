@@ -1,4 +1,6 @@
 .carousel {
+  max-width: 34rem; 
+  max-height: 23.4rem;
   margin: 0 auto;
   display: inline-block;
 
@@ -17,11 +19,10 @@
 }
 
 .slick-slide {
-  max-width: 100%; // <-- Set max-width here
-  margin: 0 auto;
-  position: relative;
-  display: flex; // <-- Added to center the image
-  justify-content: center; // <-- Added to center the image
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .slick-slide img {

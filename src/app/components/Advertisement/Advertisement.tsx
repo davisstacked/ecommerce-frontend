@@ -31,7 +31,17 @@ const Advertisement = () => {
           </div>
         </div>
         <div className={image}>
-          <Image src={imageSrc} alt={imageAlt} width={490} height={321} />
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={490}
+            height={321}
+            sizes='100vw'
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
         </div>
       </div>
     </div>

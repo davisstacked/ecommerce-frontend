@@ -31,6 +31,6 @@
     "src/app/page.tsx",
     "src/app/Products/[id]/page.tsx",
     "src/app/components/ShoppingCartItemList"
-  ],
+, "src/app/components/Carousel/Carousel.tsx"  ],
   "exclude": ["node_modules"]
 }

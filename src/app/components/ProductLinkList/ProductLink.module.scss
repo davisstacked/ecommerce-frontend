@@ -3,7 +3,7 @@
 
 .productContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   flex-direction: row;
   width: 100%;
   overflow-x: scroll; 

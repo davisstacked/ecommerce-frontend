@@ -37,7 +37,7 @@ const AddToCartButton: FC<AddToCartProps> = ({ product, quantity }) => {
       <Button
         text='Add to Cart'
         height={3.75}
-        width={28.5}
+        width={27}
         onClick={addToCart}
       />
     </Link>

@@ -1,4 +1,4 @@
-import RecoilRootWrapper from './RecoilRootWrapper';
+import RecoilRootWrapper from './recoil/RecoilRootWrapper';
 import './globals.css';
 import type { Metadata } from 'next';
 import Layout from './components/Layout/Layout';
@@ -18,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <RecoilRootWrapper>
+      <RecoilRootWrapper>
+        <body className={inter.className}>
           <Layout>{children}</Layout>
-        </RecoilRootWrapper>
-      </body>
+        </body>
+      </RecoilRootWrapper>
     </html>
   );
 }
