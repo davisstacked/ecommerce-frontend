@@ -39,33 +39,31 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
     <div className={productPage}>
       <div className={contentContainer}>
         <div className={carouselContainer}>
-          <div className={carouselWrapper}>
-            <ProductCarousel images={product.images} />
-          </div>
+          <ProductCarousel images={product.images} />
         </div>
         <div className={detailsContainer}>
           <div className={detailsWrapper}>
-          <div className={infoContainer}>
-            <div className={brand}>{product.brand}</div>
-            <div className={name}>{product.name}</div>
-            <div className={price}>
-              ${product.price.toFixed(2).replace(/\.00$/, '')}
+            <div className={infoContainer}>
+              <div className={brand}>{product.brand}</div>
+              <div className={name}>{product.name}</div>
+              <div className={price}>
+                ${product.price.toFixed(2).replace(/\.00$/, '')}
+              </div>
             </div>
+
+            <div className={divider} />
+            <div className={counterContainer}>
+              <h6>Quantity</h6>
+              <Counter
+                quantity={quantity}
+                incrementQuantity={incrementQuantity}
+                decrementQuantity={decrementQuantity}
+              />
             </div>
-          
-          <div className={divider} />
-          <div className={counterContainer}>
-            <h6>Quantity</h6>
-            <Counter
-              quantity={quantity}
-              incrementQuantity={incrementQuantity}
-              decrementQuantity={decrementQuantity}
-            />
+            <div className={addToCartButtonWrapper}>
+              <AddToCartButton product={product} quantity={quantity} />
+            </div>
           </div>
-          <div className={addToCartButtonWrapper}>
-            <AddToCartButton product={product} quantity={quantity} />
-            </div>
-            </div>
         </div>
         <div className={descriptionContainer}>
           <div className={descriptionWrapper}>
