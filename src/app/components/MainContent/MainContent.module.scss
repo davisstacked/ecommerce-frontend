@@ -1,5 +1,8 @@
-.main {
-  margin-top: 60px;  
-  margin-bottom: 40px; 
-  overflow: auto; 
+$headerHeight: 60px;
+$footerHeight: 40px;
+
+.main-component {
+  width: 100vw;
+  overflow: auto;
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
 }
