@@ -70,6 +70,11 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
             <h2>Description</h2>
             <div className={divider} />
             <p className={text}>{product.description}</p>
+            <ul>
+              {product.qualities.map((quality, index) => (
+                <li key={index}>{quality}</li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className={imageContainer}>
