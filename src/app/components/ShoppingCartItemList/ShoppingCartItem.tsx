@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-// import { Button } from 'react-bootstrap';
 import { useRecoilState } from 'recoil';
 import { shoppingCartState } from '../../recoil/atoms';
-import { Counter } from '../Counter';
+import { Counter } from '../Counter/Counter';
 import { ShoppingCartItem } from '../../interfaces';
 import Image from 'next/image';
 import styles from './ShoppingCartItem.module.scss';
@@ -24,7 +23,7 @@ const ShoppingCartItem: FC<CartItemProps> = ({ item }) => {
     productName,
     counterRemoveContainer,
     removeButton,
-    brandAndName
+    brandAndName,
   } = styles;
 
   const removeItem = () => {

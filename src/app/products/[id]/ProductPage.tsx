@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Product } from '../../interfaces';
 import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
-import { Counter } from '../../components/Counter';
+import { Counter } from '../../components/Counter/Counter';
 import styles from './ProductPage.module.scss';
 import Carousel from '../../components/Carousel/Carousel';
 import Image from 'next/image';

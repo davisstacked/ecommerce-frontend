@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 6.375rem;
+  height: 2.25rem; 
+  margin-top: 0.5rem;
+  border: #{1px solid $line-light-grey};
+}
+
+.button {
+  background-color: #{$white};
+  border: #{1px solid $line-light-grey};
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 2.25rem; 
+  height: 2.25rem; 
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.quantity {
+  font-size: 1rem;
+}

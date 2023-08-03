@@ -1,8 +1,6 @@
-// components/Footer/Footer.js
-
 import React from 'react';
 import ExternalLink from '../ExternalLink/ExternalLink';
-import styles from './Footer.module.scss'; // Import the SCSS styles
+import styles from './Footer.module.scss'; 
 
 import Image from 'next/image';
 import Link from 'next/link';
