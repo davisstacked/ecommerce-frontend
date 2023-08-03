@@ -16,18 +16,17 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
 
   const {
-    productPage,
     contentContainer,
     carouselContainer,
-    detailsContainer,
     infoContainer,
+    addToCartContainer,
+    addToCart,
     brand,
     name,
     price,
     counterContainer,
     divider,
     addToCartButtonWrapper,
-    detailsWrapper,
     descriptionContainer,
     descriptionWrapper,
     text,
@@ -39,8 +38,8 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
       <div className={carouselContainer}>
         <Carousel images={product.images} />
       </div>
-      <div className={detailsContainer}>
-        <div className={detailsWrapper}>
+      <div className={addToCartContainer}>
+        <div className={addToCart}>
           <div className={infoContainer}>
             <div className={brand}>{product.brand}</div>
             <div className={name}>{product.name}</div>
@@ -83,10 +82,9 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           alt={product.alt}
           width={175}
           height={124}
-          sizes='(mim-width: 1300px) 400px'
+          sizes='100vw'
           style={{
-            width: '100%',
-            height: 'auto',
+            objectFit: 'contain',
           }}
         />
       </div>

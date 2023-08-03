@@ -6,7 +6,12 @@
   gap: 1rem;
   flex-direction: row;
   width: 100%;
-  overflow-x: scroll; 
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .productItem {

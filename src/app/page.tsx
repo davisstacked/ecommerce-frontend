@@ -8,7 +8,7 @@ import Advertisement from './components/Advertisement/Advertisement';
 const Home: FC = () => {
   const { products, loading } = useFetchData();
 
-  const { title, homePage, productLinks } = styles;
+  const { title, homePage, productLinks, explore } = styles;
 
   if (loading) {
     return <div>Loading...</div>;
@@ -18,11 +18,9 @@ const Home: FC = () => {
     <div className={homePage}>
       <Advertisement />
       <div className={title}>
-        <h1>Explore our latest drops</h1>
+        <h1 className={explore}>Explore our latest drops</h1>
       </div>
-      <div className={productLinks}>
         <ProductLinkList products={products} />
-      </div>
     </div>
   );
 };

@@ -45,10 +45,9 @@ const Advertisement = () => {
             alt={imageAlt}
             width={490}
             height={321}
-            sizes='100vw'
+            sizes='50vw'
             style={{
-              width: '100%',
-              height: 'auto',
+              objectFit: 'contain'
             }}
           />
         </div>

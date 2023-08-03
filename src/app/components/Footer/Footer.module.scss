@@ -1,17 +1,58 @@
+@import '../../styles/variables.scss';
+
 .footer {
   height: 72px;
-  background-color: lightgrey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #{$black};
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-}
+  display: flex;
+  justify-content: center;
 
-.footer p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
+  .footerContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerLinks {
+      display: flex;
+      gap: 20px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #{$footer-text};
+    }
+  }
+
+  // Media query for mobile devices
+  @media (max-width: 767px) {
+    height: 128px;
+    padding: 10px;
+
+    .footerContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "logo links"
+        "company company";
+      align-items: center;
+
+      .footerLinks {
+        justify-content: center; 
+      }
+
+      .footerLogo {
+        grid-area: logo; 
+      }
+
+      p {
+        grid-area: company; 
+      }
+    }
+  }
 }
