@@ -5,6 +5,8 @@ import {
   subtotalSelector,
   taxSelector,
   totalSelector,
+  discountSelector,
+  shippingSelector,
 } from '../recoil/selectors';
 import { shoppingCartState } from '../recoil/atoms';
 import ShoppingCartItem from '../components/ShoppingCartItemList/ShoppingCartItem';
@@ -17,6 +19,8 @@ const ShoppingCart: FC = () => {
   const subtotal = useRecoilValue(subtotalSelector);
   const tax = useRecoilValue(taxSelector);
   const total = useRecoilValue(totalSelector);
+  const discount = useRecoilValue(discountSelector);
+  const shipping = useRecoilValue(shippingSelector);
   const buttonIconSrc = '/icons/rightArrow.svg';
   const {
     shoppingCartPage,
@@ -50,7 +54,7 @@ const ShoppingCart: FC = () => {
             <div>Subtotal:</div> <div>{subtotal.toFixed(2)}</div>
           </div>
           <div className={summaryItem}>
-            <div>Shipping and Delivery:</div> <div>20</div>
+            <div>Shipping and Delivery:</div> <div>{shipping.toFixed(2)}</div>
           </div>
           <div className={summaryItem}>
             <div>Tax:</div>
@@ -58,7 +62,7 @@ const ShoppingCart: FC = () => {
           </div>
           <div className={summaryItem}>
             <div>Discount:</div>
-            <div>6</div>
+            <div>{discount.toFixed(2)}</div>
           </div>
           <div className={summaryItem}>
             <div>Total:</div> <div>{total.toFixed(2)}</div>

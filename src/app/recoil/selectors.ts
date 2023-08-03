@@ -20,11 +20,24 @@ export const taxSelector = selector({
   },
 });
 
+export const discountSelector = selector({
+  key: 'Discount',
+  get: () => 6,
+});
+
+export const shippingSelector = selector({
+  key: 'Shipping',
+  get: () => 20,
+});
+
 export const totalSelector = selector({
   key: 'Total',
   get: ({ get }) => {
     const subtotal = get(subtotalSelector);
+    const discount = get(discountSelector);
+    const shipping = get(shippingSelector);
     const tax = get(taxSelector);
-    return subtotal + tax;
+    return subtotal - discount + tax + shipping;
   },
 });
+
