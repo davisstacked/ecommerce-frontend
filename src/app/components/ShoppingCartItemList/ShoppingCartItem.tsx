@@ -16,6 +16,7 @@ const ShoppingCartItem: FC<CartItemProps> = ({ item }) => {
   const {
     ShoppingCartItem,
     image,
+    divider,
     details,
     topDetails,
     brand,

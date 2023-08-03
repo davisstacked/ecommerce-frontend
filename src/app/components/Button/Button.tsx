@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({
   iconHeight = 24
 }) => {
   const style = {
-    width: `${width}rem`,
+    width: `${width}%`,
     height: `${height}rem`,
   };
 

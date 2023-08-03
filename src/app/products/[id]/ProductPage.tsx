@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Product } from '../../interfaces';
-import AddToCartButton from '../../components/AddToCartButton';
+import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 import { Counter } from '../../components/Counter';
 import styles from './ProductPage.module.scss';
 import Carousel from '../../components/Carousel/Carousel';

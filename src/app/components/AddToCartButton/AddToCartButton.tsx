@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import { useRecoilCallback } from 'recoil';
-import { shoppingCartState } from '../recoil/atoms';
-import { Product } from '../interfaces';
-import Button from './Button/Button';
+import { shoppingCartState } from '../../recoil/atoms';
+import { Product } from '../../interfaces';
+import Button from '../Button/Button';
 import Link from 'next/link';
+import './AddToCartButton.css';
 
 interface AddToCartProps {
   product: Product;
@@ -33,13 +34,8 @@ const AddToCartButton: FC<AddToCartProps> = ({ product, quantity }) => {
   });
 
   return (
-    <Link href='/view-cart'>
-      <Button
-        text='Add to Cart'
-        height={3.75}
-        width={27}
-        onClick={addToCart}
-      />
+    <Link className="addToCart" href='/view-cart'>
+      <Button text='Add to Cart' height={3.75} width={100} onClick={addToCart} />
     </Link>
   );
 };

@@ -21,14 +21,12 @@ const Advertisement = () => {
           <h2>{salePercentage}</h2>
           <h1>{saleTitle}</h1>
           <h6>{saleDescription}</h6>
-          <div>
             <Button
               text={buttonText}
-              width={17.69}
+              width={100}
               height={4}
               iconSrc={buttonIconSrc}
             />
-          </div>
         </div>
         <div className={image}>
           <Image
