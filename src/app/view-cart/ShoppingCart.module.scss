@@ -50,6 +50,10 @@ $breakpoint: 768px;
     display: flex;
     justify-content: space-between;
   }
+
+  .orange {
+    color: #{$orange};
+  }
 }
 
 .cartItemList {

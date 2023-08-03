@@ -30,6 +30,7 @@ const ShoppingCart: FC = () => {
     summaryWrapper,
     summaryItem,
     yourBag,
+    orange,
   } = styles;
 
   return (
@@ -61,8 +62,8 @@ const ShoppingCart: FC = () => {
             <div>{tax.toFixed(2)}</div>
           </div>
           <div className={summaryItem}>
-            <div>Discount:</div>
-            <div>{discount.toFixed(2)}</div>
+            <div className={orange}>Discount:</div>
+            <div className={orange}>{discount.toFixed(2)}</div>
           </div>
           <div className={summaryItem}>
             <div>Total:</div> <div>{total.toFixed(2)}</div>

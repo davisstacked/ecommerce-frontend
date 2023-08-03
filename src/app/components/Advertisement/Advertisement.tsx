@@ -27,11 +27,11 @@ const Advertisement = () => {
     <div className={advertisement}>
       <div className={advertisementContainer}>
         <div className={adCopy}>
-        <div className={text}>
-          <p className={percent}>{salePercentage}</p>
-          <p className={title}>{saleTitle}</p>
-          <p className={description}>{saleDescription}</p>
-        </div>
+          <div className={text}>
+            <p className={percent}>{salePercentage}</p>
+            <p className={title}>{saleTitle}</p>
+            <p className={description}>{saleDescription}</p>
+          </div>
           <Button
             text={buttonText}
             width={100}
@@ -47,7 +47,7 @@ const Advertisement = () => {
             height={321}
             sizes='50vw'
             style={{
-              objectFit: 'contain'
+              objectFit: 'contain',
             }}
           />
         </div>

@@ -76,13 +76,15 @@ One of the aspects I'm most proud of in this project is the shopping cart functi
 
 - Ideally, the application should be connected to an actual database and a proper backend instead of a JSON server.
 
-- Fix minor UI issues like the alignment of dots in the unordered list on the product page. 
+- Create more global scss variables for site design cohesiveness. 
+
+- Fix minor UI issues like the alignment of dots in the unordered list on the product page, the advertisement padding on the home page, and how the product link images line up on the home page. 
 
 - The badge on the cart button currently shows the number of unique items in the cart. It would be better if it displayed the total quantity of all items.
 
 - The images array for each product should be updated to have actual images of the project. For time's sake I used the same images for many of each project's images. 
 
-- I need to work on the performance optimization of the application. For example, implementing lazy loading of images, pagination, or virtualization can drastically improve the loading times and overall performance of the application, especially when dealing with a large inventory of products.
+- Work on the performance optimization of the application. For example, implementing lazy loading of images, pagination, or virtualization will improve the loading times and overall performance of the application, especially when dealing with a large inventory of products.
 
 #### In a Concurrent Environment
 
