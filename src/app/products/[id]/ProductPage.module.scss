@@ -1,18 +1,9 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
-.productPage {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 2px 2rem 2px;
-  overflow: scroll;
-}
 .contentContainer {
-  height: 100%;
+  margin: 2rem 0 5rem 0;
   width: 100%;
+  height: 90%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -22,96 +13,103 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
-}
 
-.carouselContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  padding-bottom: 30px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
 
-.detailsContainer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  background-color: #{$white};
-  box-shadow: 0 4px 4px 2px #{$line-light-grey};
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
+  .detailsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: #{$white};
+    box-shadow: 0 4px 4px 2px #{$line-light-grey};
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
 
-.detailsWrapper {
-  display: flex;
-  width: 90%;
-  height: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
+  .detailsWrapper {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
 
-.infoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.infoContainer .title {
-  font-size: 24px;
-  font-weight: 600;
-}
+  .infoContainer .title {
+    font-size: 24px;
+    font-weight: 600;
+  }
 
-.infoContainer .price {
-  font-size: 18px;
-  font-weight: 400;
-}
+  .infoContainer .price {
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-.addToCartButtonWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-}
+  .addToCartButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
 
-.descriptionContainer {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
+  .descriptionContainer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
 
-.descriptionWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  .descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.description {
-  margin-top: 20px;
-  font-size: 18px;
-}
+  .description {
+    margin-top: 20px;
+    font-size: 18px;
+  }
 
-.divider {
-  width: 100%;
-  height: 1px; 
-  background-color: #E9EBEE; 
-}
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e9ebee;
+  }
 
-.text {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  font-weight: 400;
+  .text {
+    line-height: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -30,9 +30,9 @@ const ProductCarousel: React.FC<ImageProps> = ({ images }) => {
             <Image
               src={image}
               alt='product carousel'
-              height={375}
-              width={546}
-              sizes='(max-width: 768px) 100vw, 768px'
+              height={125}
+              width={182}
+              sizes='100vw'
               style={{
                 width: '100%',
                 height: 'auto',

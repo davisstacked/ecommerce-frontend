@@ -20,6 +20,7 @@ $breakpoint: 768px; // Adjust this as per your design's breakpoint
 
 .yourBag {
   width: 55%; 
+  overflow: scroll;
 
   @media screen and (max-width: $breakpoint) {
     width: 100%;
@@ -55,7 +56,7 @@ $breakpoint: 768px; // Adjust this as per your design's breakpoint
   display: flex;
   justify-content: space-between;
  
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #{$line-light-grey};
   padding: 2rem 0 2rem 0;
 
   @media screen and (max-width: $breakpoint) {

@@ -9,23 +9,18 @@ $footerHeight: 72px;
   height: calc(100vh - #{$footerHeight} - #{$headerHeight});
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: #{$white};
   justify-content: center;
-  align-items: center;
+  align-items: space-around;
   margin-top: #{$headerHeight};
 }
 
 .mainContent {
   width: 80%;
-  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  // @media (max-width: 1387px) {
-  //   max-width: 100%;
-  // }
 }

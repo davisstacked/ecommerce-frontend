@@ -32,44 +32,43 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
     descriptionWrapper,
     text,
     imageContainer,
-    carouselWrapper,
   } = styles;
 
   return (
-    <div className={productPage}>
-      <div className={contentContainer}>
-        <div className={carouselContainer}>
-          <Carousel images={product.images} />
-        </div>
-        <div className={detailsContainer}>
-          <div className={detailsWrapper}>
-            <div className={infoContainer}>
-              <div className={brand}>{product.brand}</div>
-              <div className={name}>{product.name}</div>
-              <div className={price}>
-                ${product.price.toFixed(2).replace(/\.00$/, '')}
-              </div>
-            </div>
-
-            <div className={divider} />
-            <div className={counterContainer}>
-              <h6>Quantity</h6>
-              <Counter
-                quantity={quantity}
-                incrementQuantity={incrementQuantity}
-                decrementQuantity={decrementQuantity}
-              />
-            </div>
-            <div className={addToCartButtonWrapper}>
-              <AddToCartButton product={product} quantity={quantity} />
+    <div className={contentContainer}>
+      <div className={carouselContainer}>
+        <Carousel images={product.images} />
+      </div>
+      <div className={detailsContainer}>
+        <div className={detailsWrapper}>
+          <div className={infoContainer}>
+            <div className={brand}>{product.brand}</div>
+            <div className={name}>{product.name}</div>
+            <div className={price}>
+              ${product.price.toFixed(2).replace(/\.00$/, '')}
             </div>
           </div>
+
+          <div className={divider} />
+          <div className={counterContainer}>
+            <h6>Quantity</h6>
+            <Counter
+              quantity={quantity}
+              incrementQuantity={incrementQuantity}
+              decrementQuantity={decrementQuantity}
+            />
+          </div>
+          <div className={addToCartButtonWrapper}>
+            <AddToCartButton product={product} quantity={quantity} />
+          </div>
         </div>
-        <div className={descriptionContainer}>
-          <div className={descriptionWrapper}>
-            <h2>Description</h2>
-            <div className={divider} />
-            <p className={text}>{product.description}</p>
+      </div>
+      <div className={descriptionContainer}>
+        <div className={descriptionWrapper}>
+          <h2>Description</h2>
+          <div className={divider} />
+          <div className={text}>
+            <p>{product.description}</p>
             <ul>
               {product.qualities.map((quality, index) => (
                 <li key={index}>{quality}</li>
@@ -77,19 +76,19 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
             </ul>
           </div>
         </div>
-        <div className={imageContainer}>
-          <Image
-            src={product.images[3]}
-            alt={product.alt}
-            width={350}
-            height={248}
-            sizes='100vw'
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </div>
+      </div>
+      <div className={imageContainer}>
+        <Image
+          src={product.images[3]}
+          alt={product.alt}
+          width={175}
+          height={124}
+          sizes='(mim-width: 1300px) 400px'
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+        />
       </div>
     </div>
   );
