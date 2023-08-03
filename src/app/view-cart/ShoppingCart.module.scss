@@ -45,6 +45,11 @@ $breakpoint: 768px; // Adjust this as per your design's breakpoint
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .summaryItem {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .cartItemList {

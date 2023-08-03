@@ -24,6 +24,7 @@ const ShoppingCart: FC = () => {
     cartItem,
     summaryContainer,
     summaryWrapper,
+    summaryItem,
     yourBag,
   } = styles;
 
@@ -41,19 +42,34 @@ const ShoppingCart: FC = () => {
       </div>
       <div className={summaryContainer}>
         <div className={summaryWrapper}>
-        <h1>Summary</h1>
-        <div>Subtotal: {subtotal.toFixed(2)}</div>
-        <div>Shipping and Delivery: 20</div>
-        <div>Tax: {tax.toFixed(2)}</div>
-        <div>Discount: 6</div>
-        <div>Total: {total.toFixed(2)}</div>
-        <Button
-          text='Checkout'
-          width={100}
-          height={3.75}
-          iconSrc={buttonIconSrc}
-          />
+          <div className={summaryItem}>
+            <h1>Summary</h1>
+            <div></div>
           </div>
+          <div className={summaryItem}>
+            <div>Subtotal:</div> <div>{subtotal.toFixed(2)}</div>
+          </div>
+          <div className={summaryItem}>
+            <div>Shipping and Delivery:</div> <div>20</div>
+          </div>
+          <div className={summaryItem}>
+            <div>Tax:</div>
+            <div>{tax.toFixed(2)}</div>
+          </div>
+          <div className={summaryItem}>
+            <div>Discount:</div>
+            <div>6</div>
+          </div>
+          <div className={summaryItem}>
+            <div>Total:</div> <div>{total.toFixed(2)}</div>
+          </div>
+          <Button
+            text='Checkout'
+            width={100}
+            height={3.75}
+            iconSrc={buttonIconSrc}
+          />
+        </div>
       </div>
     </div>
   );
