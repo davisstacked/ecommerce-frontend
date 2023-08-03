@@ -11,7 +11,8 @@
 
   @media (max-width: 1008px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2rem;
+    grid-template-rows: repeat(4, 200px);
   }
 
   .carouselContainer {
@@ -38,6 +39,8 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+
+    
   }
 
   .detailsWrapper {
@@ -75,8 +78,9 @@
   .descriptionContainer {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 20px;
-    width: 50%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -86,6 +90,7 @@
 
   .descriptionWrapper {
     display: flex;
+    height: 70%;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -112,4 +117,4 @@
     align-items: center;
     justify-content: center;
   }
-}
+  }

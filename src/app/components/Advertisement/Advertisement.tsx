@@ -4,7 +4,16 @@ import Button from '../Button/Button';
 import Image from 'next/image';
 
 const Advertisement = () => {
-  const { advertisement, text, image, advertisementContainer } = styles;
+  const {
+    advertisement,
+    text,
+    title,
+    image,
+    percent,
+    advertisementContainer,
+    description,
+    adCopy,
+  } = styles;
 
   const salePercentage = '25% Off';
   const saleTitle = 'Summer Sale';
@@ -17,16 +26,18 @@ const Advertisement = () => {
   return (
     <div className={advertisement}>
       <div className={advertisementContainer}>
+        <div className={adCopy}>
         <div className={text}>
-          <h2>{salePercentage}</h2>
-          <h1>{saleTitle}</h1>
-          <h6>{saleDescription}</h6>
-            <Button
-              text={buttonText}
-              width={100}
-              height={4}
-              iconSrc={buttonIconSrc}
-            />
+          <p className={percent}>{salePercentage}</p>
+          <p className={title}>{saleTitle}</p>
+          <p className={description}>{saleDescription}</p>
+        </div>
+          <Button
+            text={buttonText}
+            width={100}
+            height={4}
+            iconSrc={buttonIconSrc}
+          />
         </div>
         <div className={image}>
           <Image

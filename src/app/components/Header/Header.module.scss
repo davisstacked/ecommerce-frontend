@@ -28,22 +28,21 @@
   margin-right: auto;
 }
 
-.right-side {
+.viewCartButton {
+  width: 16rem;
+  height: 2.5rem;
+  border-radius: 4px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-decoration: none;
 
-  button {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-
-    img {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-    }
+  &:hover {
+    background-color: #{$line-light-grey};
   }
+}
+
+.buttonText {
+  margin-left: .5rem;
+  text-decoration: none !important;
 }
