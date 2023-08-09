@@ -1,5 +1,6 @@
 import RecoilRootWrapper from './recoil/RecoilRootWrapper';
 import './globals.css';
+import 'normalize.css';
 import type { Metadata } from 'next';
 import Layout from './components/Layout/Layout';
 import { Inter } from 'next/font/google';

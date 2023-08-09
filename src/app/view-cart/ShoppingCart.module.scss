@@ -1,11 +1,6 @@
 @import '../styles/variables.scss';
 $breakpoint: 768px; 
 
-.mainContent {
-  width: 80%;
-  margin: 0 auto;
-}
-
 .shoppingCartPage {
   display: flex;
   flex-direction: row;

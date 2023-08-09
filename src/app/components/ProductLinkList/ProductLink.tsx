@@ -16,11 +16,6 @@ const ProductPageLink: FC<ProductPageLinkProps> = ({ product }) => {
           <Image
             src={product.images[0]}
             alt={product.alt}
-            sizes='100vw'
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
             width={261}
             height={284}
           />

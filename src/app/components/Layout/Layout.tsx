@@ -9,13 +9,11 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
-      <MainContent>
-        {children}
-      </MainContent>
+      <MainContent>{children}</MainContent>
       <Footer />
-    </div>
+    </>
   );
 };
 

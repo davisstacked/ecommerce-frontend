@@ -82,9 +82,9 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           alt={product.alt}
           width={175}
           height={124}
-          sizes='100vw'
+          sizes='(max-width: 768px) 50vw, 175px, (max-width: 1024px) 50vw, 175px, (max-width: 1280px) 25vw, 175px, 175px'
           style={{
-            objectFit: 'contain',
+            height: '100%',
           }}
         />
       </div>
