@@ -9,7 +9,9 @@ const MainContent: FC<MainContentProps> = ({ children }) => {
   const { main, mainContent } = styles;
   return (
     <main className={main}>
-      <div className={mainContent}>{children}</div>
+      {/* <div className={mainContent}> */}
+        {children}
+      {/* </div> */}
     </main>
   );
 };

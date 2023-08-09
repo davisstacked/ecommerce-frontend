@@ -10,7 +10,6 @@ import {
 } from '../recoil/selectors';
 import { shoppingCartState } from '../recoil/atoms';
 import ShoppingCartItem from '../components/ShoppingCartItemList/ShoppingCartItem';
-import Link from 'next/link';
 import styles from './ShoppingCart.module.scss';
 import Button from '../components/Button/Button';
 

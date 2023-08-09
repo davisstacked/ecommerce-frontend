@@ -4,14 +4,14 @@
 .homePage {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 80%;
   padding: 4rem 0 6rem 0;
   overflow: scroll;
   flex-direction: column;
   justify-content: space-evenly;
 
   @media (max-width: 1300px) {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 0 0;
   }
 
   @media (max-width: 767px) {

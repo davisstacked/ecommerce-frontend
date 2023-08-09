@@ -1,10 +1,10 @@
 .carousel {
-  max-width: 40vw; 
+  max-width: 40vw;
   max-height: auto;
   margin: 0 auto;
   display: inline-block;
 
-  @media (max-width: 1008px) {
+  @media (max-width: 991px) {
     max-width: 100%;
   }
 
@@ -15,7 +15,7 @@
   .slick-dots {
     position: absolute;
     bottom: -25px;
-    width: 100%; 
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
