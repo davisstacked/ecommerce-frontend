@@ -1,35 +1,27 @@
 .carousel {
-  max-width: 40vw;
-  max-height: auto;
-  margin: 0 auto;
-  display: inline-block;
+  height: 100%;
+  border-radius: 20px;
+  //padding-bottom: 70px;
+  //padding-bottom: 200px;
+  //.slick-dots:;
 
-  @media (max-width: 991px) {
-    max-width: 100%;
+  @media (max-width: 1008px) {
+    height: 25%;
+    padding-bottom: 0;
   }
 
-  .slick-slider {
-    position: relative;
-  }
-
-  .slick-dots {
-    position: absolute;
-    bottom: -25px;
-    width: 100%;
+  .slick-slide {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+
   }
-}
-
-.slick-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
-.slick-slide img {
-  width: 100%;
-  height: auto;
+  .slickSlide {
+    img {
+      max-height: 311px;
+      align-self: center;
+      // height: auto;
+    }
+  }
 }

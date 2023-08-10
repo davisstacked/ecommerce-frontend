@@ -16,11 +16,10 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
 
   const {
-    contentContainer,
+    productPage,
     carouselContainer,
     infoContainer,
     addToCartContainer,
-    addToCart,
     brand,
     name,
     price,
@@ -34,32 +33,29 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
   } = styles;
 
   return (
-    <div className={contentContainer}>
+    <div className={productPage}>
       <div className={carouselContainer}>
         <Carousel images={product.images} />
       </div>
       <div className={addToCartContainer}>
-        <div className={addToCart}>
-          <div className={infoContainer}>
-            <div className={brand}>{product.brand}</div>
-            <div className={name}>{product.name}</div>
-            <div className={price}>
-              ${product.price.toFixed(2).replace(/\.00$/, '')}
-            </div>
+        <div className={infoContainer}>
+          <div className={brand}>{product.brand}</div>
+          <div className={name}>{product.name}</div>
+          <div className={price}>
+            ${product.price.toFixed(2).replace(/\.00$/, '')}
           </div>
-
-          <div className={divider} />
-          <div className={counterContainer}>
-            <h6>Quantity</h6>
-            <Counter
-              quantity={quantity}
-              incrementQuantity={incrementQuantity}
-              decrementQuantity={decrementQuantity}
-            />
-          </div>
-          <div className={addToCartButtonWrapper}>
-            <AddToCartButton product={product} quantity={quantity} />
-          </div>
+        </div>
+        <div className={divider} />
+        <div className={counterContainer}>
+          <h6>Quantity</h6>
+          <Counter
+            quantity={quantity}
+            incrementQuantity={incrementQuantity}
+            decrementQuantity={decrementQuantity}
+          />
+        </div>
+        <div className={addToCartButtonWrapper}>
+          <AddToCartButton product={product} quantity={quantity} />
         </div>
       </div>
       <div className={descriptionContainer}>
@@ -82,10 +78,7 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           alt={product.alt}
           width={175}
           height={124}
-          sizes='(max-width: 768px) 50vw, 175px, (max-width: 1024px) 50vw, 175px, (max-width: 1280px) 25vw, 175px, 175px'
-          style={{
-            height: '100%',
-          }}
+          sizes='(max-width: 768px) 200px, (max-width: 1024px) 300px, (max-width: 1280px) 350px, (min-width: 1281px) 800px'
         />
       </div>
     </div>

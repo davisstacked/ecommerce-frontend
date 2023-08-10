@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <p>© dot.cards text task. All rights reserved.</p>
+        <p>© dot.cards task. All rights reserved.</p>
         <div className={styles.footerLinks}>
           <ExternalLink
             url='https://www.instagram.com/officialgretagerwig/'
