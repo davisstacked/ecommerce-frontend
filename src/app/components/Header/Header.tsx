@@ -19,12 +19,6 @@ const Header: FC = () => {
             />
           </Link>
         </div>
-        {/* <Link href='/view-cart'>
-          <button className={viewCartButton}>
-            <Image src='/icons/cart.svg' alt='cart' width={15.75} height={18} />
-              <div className={buttonText}>View Cart</div>
-          </button>
-        </Link> */}
         <ViewCartButton />
       </div>
     </header>

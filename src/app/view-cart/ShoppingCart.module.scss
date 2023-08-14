@@ -1,5 +1,4 @@
 @import '../styles/variables.scss';
-$breakpoint: 991px;
 
 .shoppingCartPage {
   display: flex;
@@ -8,27 +7,26 @@ $breakpoint: 991px;
   padding: 4rem 0 6rem 0;
   width: 80%;
 
-  @media screen and (max-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint-small) {
     flex-direction: column-reverse;
   }
 
   .yourBag {
     width: 55%;
 
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint-small) {
       width: 100%;
     }
   }
   .summaryContainer {
     box-shadow: 0 4px 4px 2px #{$line-light-grey};
     width: 35%;
-    height: 70%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space;
     align-items: center;
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint-small) {
       width: 100%;
     }
   }
@@ -62,7 +60,7 @@ $breakpoint: 991px;
     border-bottom: 1px solid #{$line-light-grey};
     padding: 2rem 0 2rem 0;
 
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint-small) {
       flex-direction: column;
     }
   }

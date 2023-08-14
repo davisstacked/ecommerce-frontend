@@ -78,7 +78,7 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
           alt={product.alt}
           width={175}
           height={124}
-          sizes='(max-width: 768px) 200px, (max-width: 1024px) 300px, (max-width: 1280px) 350px, (min-width: 1281px) 800px'
+          sizes='(max-width: 767px) 200px, (max-width: 1024px) 300px, (max-width: 1280px) 350px, (min-width: 1281px) 800px'
         />
       </div>
     </div>

@@ -34,7 +34,7 @@ const Advertisement = () => {
           priority={true}
           width={490}
           height={321}
-          sizes='(max-width: 768px) 200px, (max-width: 1024px) 300px, (max-width: 1280px) 500px, (max-width: 1536px) 600px'
+          sizes='(max-width: 767px) 200px, (max-width: 1024px) 300px, (max-width: 1280px) 500px, (max-width: 1536px) 600px'
         />
       </div>
     </div>

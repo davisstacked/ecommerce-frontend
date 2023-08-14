@@ -6,6 +6,11 @@
   height: 2.25rem; 
   padding-right: 2.5rem;
 
+  &:hover {
+    color: initial !important;
+    border-color: initial !important;
+  }
+
   .buttonText {
     margin-left: 8px;
   }

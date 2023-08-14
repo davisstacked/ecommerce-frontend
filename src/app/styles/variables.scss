@@ -1,14 +1,20 @@
-$hero-bg: #EAEEEF;
-$white: #FFFFFF;
-$black: #201B21;
-$dark-grey: #67696E;
-$footer-text: #D9DBE1;
-$line-light-grey: #E9EBEE;
-$pale-green: #A7C6BA;
-$orange: #EC5E2A;
+$hero-bg: #eaeeef;
+$white: #ffffff;
+$black: #201b21;
+$dark-grey: #67696e;
+$footer-text: #d9dbe1;
+$line-light-grey: #e9ebee;
+$pale-green: #a7c6ba;
+$orange: #ec5e2a;
 $title-height: 48px;
 $hover: #333;
 
 $headerHeight: 64px;
 $footerHeight: 72px;
 $smallScreenFooterHeight: 128px;
+
+$breakpoint-xsmall: 620px;
+$breakpoint-small: 767px;
+$breakpoint-medium: 1008px;
+$breakpoint-large: 1280px;
+$breakpoint-xlarge: 1440px;

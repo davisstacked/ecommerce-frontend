@@ -1,11 +1,10 @@
+@import '../../styles/variables.scss';
+
 .carousel {
   height: 100%;
   border-radius: 20px;
-  //padding-bottom: 70px;
-  //padding-bottom: 200px;
-  //.slick-dots:;
 
-  @media (max-width: 1008px) {
+  @media (max-width: $breakpoint-medium) {
     height: 25%;
     padding-bottom: 0;
   }
@@ -15,7 +14,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-
   }
   .slickSlide {
     img {
