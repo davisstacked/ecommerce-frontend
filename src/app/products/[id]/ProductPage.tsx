@@ -59,7 +59,6 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
         </div>
       </div>
       <div className={descriptionContainer}>
-        <div className={descriptionWrapper}>
           <h2>Description</h2>
           <div className={divider} />
           <div className={text}>
@@ -69,7 +68,6 @@ const ProductPage: FC<ProductPageProps> = ({ product }) => {
                 <li key={index}>{quality}</li>
               ))}
             </ul>
-          </div>
         </div>
       </div>
       <div className={imageContainer}>

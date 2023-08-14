@@ -39,15 +39,8 @@
 
   &:hover {
     background-color: #{$line-light-grey};
-    color: pink;
   }
 }
-
-:where(.css-dev-only-do-not-override-19gw05y).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
-    color: green;
-    border-color: #4096ff;
-}
-
 
 .buttonText {
   margin-left: .5rem;
