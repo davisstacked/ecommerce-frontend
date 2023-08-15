@@ -70,7 +70,7 @@ const ShoppingCart: FC = () => {
           <Button
             text='Checkout'
             width={100}
-            height={3.75}
+            height={3}
             iconSrc={buttonIconSrc}
           />
         </div>

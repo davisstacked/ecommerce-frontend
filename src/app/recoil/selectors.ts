@@ -1,6 +1,14 @@
 import { selector } from 'recoil';
 import { shoppingCartState } from './atoms'; 
 
+export const cartQuantitySelector = selector({
+  key: 'CartQuantity',
+  get: ({ get }) => {
+    const cart = get(shoppingCartState);
+    return cart.items.reduce((sum, item) => sum + item.quantity, 0);
+  }
+});
+
 export const subtotalSelector = selector({
   key: 'Subtotal',
   get: ({ get }) => {

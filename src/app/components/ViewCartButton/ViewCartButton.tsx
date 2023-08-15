@@ -3,13 +3,12 @@ import React from 'react';
 import styles from './ViewCartButton.module.scss';
 import { Badge, Button } from 'antd';
 import { useRecoilValue } from 'recoil';
-import { shoppingCartState } from '../../recoil/atoms';
+import { cartQuantitySelector } from '@/app/recoil/selectors';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const ViewCartButton = () => {
-  const shoppingCart = useRecoilValue(shoppingCartState);
-  const itemsCount = shoppingCart.items.length;
+  const itemsCount = useRecoilValue(cartQuantitySelector);
   const { badge, button, buttonText } = styles;
   const cartIcon = {
     src: '/icons/cart.svg',
