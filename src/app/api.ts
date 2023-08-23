@@ -1,6 +1,7 @@
+const fetchUrl = 'https://json-server-f8nc6iyk6-davisstacked.vercel.app/products'
 export async function fetchData() {
   try {
-    const response = await fetch('http://localhost:3001/products');
+    const response = await fetch(fetchUrl);
     const data = await response.json();
     return data;
   } catch (error) {
