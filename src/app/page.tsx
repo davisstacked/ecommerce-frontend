@@ -1,5 +1,6 @@
 'use client';
 import React, { FC } from 'react';
+import Loading from './components/LoadingPage/LoadingPage';
 import { useFetchData } from './recoil/atoms';
 import styles from './page.module.scss';
 import ProductLinkList from './components/ProductLinkList/ProductLinkList';
@@ -11,7 +12,7 @@ const Home: FC = () => {
   const { title, homePage } = styles;
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
