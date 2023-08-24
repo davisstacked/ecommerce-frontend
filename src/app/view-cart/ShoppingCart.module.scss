@@ -7,8 +7,14 @@
   padding: 4rem 0 6rem 0;
   width: 80%;
 
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 90%;
+  }
+
   @media screen and (max-width: $breakpoint-small) {
     flex-direction: column-reverse;
+    width: 80%;
+    padding: 2rem 0 2rem 0;
   }
 
   .yourBag {
@@ -21,13 +27,17 @@
   .summaryContainer {
     box-shadow: 0 4px 4px 2px #{$line-light-grey};
     width: 35%;
+    max-height: 50vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space;
     align-items: center;
+
     @media screen and (max-width: $breakpoint-small) {
       width: 100%;
+      line-height: 2;
+      padding: 0;
     }
   }
 
@@ -41,6 +51,10 @@
     .summaryItem {
       display: flex;
       justify-content: space-between;
+
+      h1 { 
+        margin-bottom: 0;
+      }
     }
 
     .orange {
